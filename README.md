@@ -1,1 +1,1 @@
-# Team-10-SanbercodeQA
+# Team10-SanbercodeQA
