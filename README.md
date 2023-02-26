@@ -9,7 +9,7 @@ Final Project Sanber Code QA Batch 42 Team 10
 - Dinda Meysya Rochma
 - Andhiny Fatikha
 
-#URL to Test
+# URL to Test
 https://opensource-demo.orangehrmlive.com/
 
 # Test Plan & Test Case
