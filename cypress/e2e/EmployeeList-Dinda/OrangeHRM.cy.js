@@ -39,7 +39,7 @@ beforeEach(() => {
     cy.contains('0042')
     })
 
-  it('Search by employee name - Unregistered id', () => {
+  it('Search by employee id - Unregistered id', () => {
     cy.get(':nth-child(2) > .oxd-input').type('00000000000000')
     cy.get('.oxd-form-actions > .oxd-button--secondary').click({force: true})
     cy.contains('No Records Found')
@@ -77,7 +77,7 @@ beforeEach(() => {
     cy.get('.oxd-button--text').click()
     })  
 
-  //Edit data 
+  // Edit data 
   it('Edit', () => {
     cy.get(':nth-child(1) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(2)').click({force: true})
     cy.get('.--name-grouped-field > :nth-child(1) > :nth-child(2) > .oxd-input').clear().type('Antony')
@@ -94,6 +94,12 @@ beforeEach(() => {
     cy.get(':nth-child(3) > :nth-child(1) > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input').clear()
     cy.get(':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button').click()
       }) 
+    
+  it('Edit - Employee id already to use', () => {
+    cy.get(':nth-child(1) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(2)').click({force: true})
+    cy.get(':nth-child(3) > :nth-child(1) > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input').clear().type('0024')
+    cy.get(':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button').click()
+    }) 
   
   it('Edit - work email success', () => {
     cy.get(':nth-child(1) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(2)').click({force: true})
@@ -110,11 +116,11 @@ beforeEach(() => {
   })
 
   it('Edit - Job', () => {
-    cy.get(':nth-child(1) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(2)').click({force: true})
-    cy.get(':nth-child(6) > .orangehrm-tabs-item').click({force: true})
-    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click({force: true})
+    cy.get(':nth-child(1) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(2)').click({force: true}) //masuk ke edit 
+    cy.get(':nth-child(6) > .orangehrm-tabs-item').click({force: true}) //masuk ke edit job
+    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click({force: true}) //edit job title
     cy.wait(3000)
-    cy.contains('aaa').click({force: true})
+    cy.contains('Account Assistant').click({force: true})
     cy.get('.oxd-form-actions > .oxd-button').click()
   })
   
