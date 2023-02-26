@@ -8,3 +8,7 @@ Final Project Sanber Code QA Batch 42 Team 10
 - Athif Zakiyanto
 - Dinda Meysya Rochma
 - Andhiny Fatikha
+
+# Test Plan & Test Case
+
+https://docs.google.com/spreadsheets/d/13Ta4UMQQgnhUpRU8ymImZk4Q9e6Rfa9j2JxwPikHi_0/edit?usp=sharing
