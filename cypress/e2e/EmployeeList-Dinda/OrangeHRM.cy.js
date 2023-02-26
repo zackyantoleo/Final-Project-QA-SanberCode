@@ -39,7 +39,7 @@ beforeEach(() => {
     cy.contains('0042')
     })
 
-  it('Search by employee name - Unregistered id', () => {
+  it('Search by employee id - Unregistered id', () => {
     cy.get(':nth-child(2) > .oxd-input').type('00000000000000')
     cy.get('.oxd-form-actions > .oxd-button--secondary').click({force: true})
     cy.contains('No Records Found')
